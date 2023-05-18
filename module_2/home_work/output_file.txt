@@ -1,0 +1,7 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0   2324  1512 ?        Sl   00:00   0:00 /init
+root         4  0.0  0.0   2340    68 ?        Sl   00:01   0:00 plan9 --control-socket 5 --log-level 4 --server-fd 6 --pipe-fd 8 --log-truncate
+root         8  0.0  0.0   2328   112 ?        Ss   00:01   0:00 /init
+root         9  0.0  0.0   2344   116 ?        S    00:01   0:00 /init
+elofd       10  0.0  0.0   6176  5100 pts/0    Ss   00:01   0:00 -bash
+elofd       46  0.0  0.0   7480  3156 pts/0    R+   00:02   0:00 ps aux

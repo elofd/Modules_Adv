@@ -13,6 +13,17 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # with open(BOOK_FILE) as book:
 
 
+@app.route('/')
+def index():
+    return "<a href='/hello_world'>/hello_world</a><br>" \
+           "<a href='/cars'>/cars</a><br>" \
+           "<a href='/cats'>/cats</a><br>" \
+           "<a href='/get_time/now'>/get_time/now</a><br>" \
+           "<a href='/get_time/future'>/get_time/future</a><br>" \
+           "<a href='/get_random_word'>/get_random_word</a><br>" \
+           "<a href='/counter'>/counter</a><br>"
+
+
 @app.route('/hello_world')
 def hello_world():
     return 'Привет, мир!'
@@ -50,3 +61,6 @@ def counter():
     global COUNTER
     COUNTER += 1
     return f'Вы посещали страницу {COUNTER} раз'
+
+
+app.run()
