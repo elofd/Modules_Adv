@@ -1,0 +1,5 @@
+total 40
+-rw-rw-r-- 1 elofd elofd   500 мая 18 10:00 app.py
+-rw-rw-r-- 1 elofd elofd   289 мая 18 10:21 get_mean_size.py
+-rw-rw-r-- 1 elofd elofd     0 мая 18 10:21 ls.txt
+-rw-rw-r-- 1 elofd elofd 32448 мая 18 09:57 output_file.txt
