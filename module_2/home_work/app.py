@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 @app.route('/get_summary_rss')
-def get_summary_rss():
+def get_summary_rss() -> str:
     summa = 0
     filename = 'output_file.txt'
     with open(filename, 'r', encoding='utf-8') as file:
@@ -19,7 +19,7 @@ def get_summary_rss():
 
 
 @app.route('/hello_world/<string:name>')
-def hello_world(name):
+def hello_world(name: str) -> str:
     weekday = datetime.today().weekday()
     weekdays_tuple = ('Понедельника', 'Вторника', 'Среды',
                       'Четверга', 'Пятницы', 'Субботы', 'Воскресенья')
@@ -28,16 +28,16 @@ def hello_world(name):
 
 
 @app.route('/max_number/<path:numbers>')
-def max_number(numbers):
+def max_number(numbers: str) -> str:
     try:
         maximum = max(map(int, numbers.split('/')))
-        return f'Максимальное число: {maximum}'
+        return f'Максимальное число: <i>{maximum}</i>'
     except ValueError:
         return 'Ошибка, можно передавать только числа'
 
 
 @app.route('/preview/<int:size>/<path:relative_path>')
-def preview(size, relative_path):
+def preview(size: int, relative_path: str) -> str:
     abs_path = os.path.abspath(relative_path)
     with open(relative_path, 'r', encoding='utf-8') as file:
         data = file.read(size)

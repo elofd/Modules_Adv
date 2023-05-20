@@ -1,23 +1,35 @@
+"""
+Программа для преобразования шифрованной строки
+"""
+
 import sys
 
 
-def decrypt():
+def decrypt(message: str) -> str:
+    """
+    Функция для преобразования зашифрованной строки
+    :param message: сообщение, которое нужно преобразовать
+    :return: str: расшифрованная строка
+    """
+    result = []
+    for elem in message:
+        result.append(elem)
+        if len(result) > 2 and (result[-1], result[-2]) == ('.', '.'):
+            result.pop()
+            result.pop()
+            if result:
+                result.pop()
+    return ''.join([elem for elem in result if elem != '.'])
+
+
+def main() -> None:
+    """
+    Основная программа
+    :return: None
+    """
     data = sys.stdin.read().strip()
-    result = ''
-    count = 0
-    for elem in data:
-        if elem == '.':
-            count += 1
-        elif count < 2:
-            result += elem
-            count = 0
-        else:
-            result = result[:-(count // 2)] + elem
-            count = 0
-    if result == '’':
-        result = '’’'
-    print(f'{data} > {result}')
+    print(decrypt(data))
 
 
 if __name__ == '__main__':
-    decrypt()
+    main()

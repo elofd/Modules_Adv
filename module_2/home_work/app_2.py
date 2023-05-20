@@ -6,8 +6,10 @@ storage = {}
 
 
 @app.route('/add/<date>/<int:expense>')
-def add(date, expense):
+def add(date: str, expense: int) -> str:
     try:
+        if len(date) != 8 and int(date):
+            raise ValueError
         storage.setdefault(int(date[:4]), {}).setdefault(int(date[4:6]), 0)
         storage[int(date[:4])][int(date[4:6])] += expense
         return f'{storage}'
@@ -16,7 +18,7 @@ def add(date, expense):
 
 
 @app.route('/calculate/<int:year>')
-def calculate_year(year):
+def calculate_year(year: int) -> str:
     try:
         total = sum(storage[year].values())
         return f'Суммарные траты за {year} год: {total}'
@@ -25,7 +27,7 @@ def calculate_year(year):
 
 
 @app.route('/calculate/<int:year>/<int:month>')
-def calculate_month(year, month):
+def calculate_month(year: int, month: int) -> str:
     try:
         total = storage[year][month]
         return f'Суммарные траты за {month} месяц {year} года: {total}'
