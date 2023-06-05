@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/elofd/PycharmProjects/pythonProjects/Modules_Adv/Modules_Adv/module_5/home_work/lesson1_4.py", line 35, in <module>
+    raise Exception('Hello stderr.txt')
+Exception: Hello stderr.txt

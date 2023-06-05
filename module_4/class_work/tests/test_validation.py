@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from Modules_Adv.module_4.class_work.lesson4_1 import app, RegistrationForm, number_length, ValidationError
+from Modules_Adv.module_4.class_work.lesson4_1 import app
 
 
 class FormValidationTest(TestCase):
