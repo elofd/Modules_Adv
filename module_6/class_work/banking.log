@@ -1,0 +1,34 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 123-559-923
+DEBUG:bank_api_logger:Request 4 from 1
+DEBUG:bank_api_logger:Successfully opened 1 card
+DEBUG:bank_api_logger:Person with id = 4 has not found in 1
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2023 17:56:37] "[33mGET /bank_api/1/4 HTTP/1.1[0m" 404 -
+DEBUG:bank_api_logger:Request 4 from 1
+DEBUG:bank_api_logger:Successfully opened 1 card
+DEBUG:bank_api_logger:Person with id = 4 has not found in 1
+INFO:werkzeug:127.0.0.1 - - [11/Jun/2023 18:00:15] "[33mGET /bank_api/1/4 HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/elofd/PycharmProjects/pythonProjects/Modules_Adv/Modules_Adv/module_6/class_work/lesson2_3.py', reloading
+INFO:werkzeug: * Restarting with stat
+2023-06-11 18:06:03,040 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-06-11 18:06:03,041 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2023-06-11 18:06:03,042 - werkzeug - INFO -  * Restarting with stat
+2023-06-11 18:06:03,260 - werkzeug - WARNING -  * Debugger is active!
+2023-06-11 18:06:03,272 - werkzeug - INFO -  * Debugger PIN: 123-559-923
+2023-06-11 18:06:14,891 - bank_api_logger - DEBUG - Request 4 from 1
+2023-06-11 18:06:14,897 - bank_api_logger - DEBUG - Successfully opened 1 card
+2023-06-11 18:06:14,897 - bank_api_logger - DEBUG - Person with id = 4 has not found in 1
+2023-06-11 18:06:14,897 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2023 18:06:14] "[33mGET /bank_api/1/4 HTTP/1.1[0m" 404 -
+2023-06-11 18:06:28,237 - bank_api_logger - DEBUG - Request 4 from 1
+2023-06-11 18:06:28,239 - bank_api_logger - DEBUG - Successfully opened 1 card
+2023-06-11 18:06:28,241 - bank_api_logger - DEBUG - Person with id = 4 has not found in 1
+2023-06-11 18:06:28,241 - werkzeug - INFO - 127.0.0.1 - - [11/Jun/2023 18:06:28] "[33mGET /bank_api/1/4 HTTP/1.1[0m" 404 -
+2023-06-11 19:07:06,340 - werkzeug - INFO -  * Detected change in '/home/elofd/PycharmProjects/pythonProjects/Modules_Adv/Modules_Adv/module_6/class_work/lesson4_1.py', reloading
+2023-06-11 19:07:06,394 - werkzeug - INFO -  * Restarting with stat
+2023-06-11 19:07:06,681 - werkzeug - WARNING -  * Debugger is active!
+2023-06-11 19:07:06,686 - werkzeug - INFO -  * Debugger PIN: 123-559-923
